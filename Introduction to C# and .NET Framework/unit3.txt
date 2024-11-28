@@ -1,0 +1,204 @@
+Object-Oriented Programming (OOP) Concepts:
+This unit focuses on the core principles of Object-Oriented Programming 
+(OOP) in C#. These principles make it easier to write and maintain large 
+programs by organizing code into reusable units.
+
+
+#                                           class
+
+So what is this class thing?
+
+As you know that C# is an object-oriented programming language.
+Everything in C# is associated with classes and objects, along 
+with its attributes and methods.For example: in real life, a car 
+is an object. The car has attributes, such as weight and color, 
+and methods, such as drive and brake.
+
+-- To create a class, use the class keyword:
+
+        class Animal 
+        {
+          string animal= "DOG";
+        }
+As you can see here we've created a class named "Animal"
+With a String type variable and stored "DOG" data inside the 
+variable.
+
+
+#                        Constructors and Destructors
+
+So what do you mean by a Constructors and Destructors?
+
+Constructor: A special method that is called automatically 
+             when you create an object. It helps to initialize 
+             properties of the object.
+
+
+Destructor: A special method that is called when an object is being 
+            destroyed (not used often in modern C#).
+
+
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public void Introduce()
+    {
+        Console.WriteLine($"Hi, I am {Name} and I am {Age} years old.");
+    }
+}
+
+ --Constructor is called here:
+
+Person person = new Person("Abishek", 21);
+person.Introduce();
+
+Hi, I am Abishek and I am 22 years old.
+
+
+
+#                    Properties
+
+Properties are like "variables" inside a class, but they are more controlled.
+You can set (assign a value) or get (retrieve a value) with properties.
+Example in Code:
+
+public class Book
+{
+    public string Title { get; set; } // Property
+    public string Author { get; set; } // Property
+
+
+Book myBook = new Book();
+myBook.Title = "C# Made Simple";
+myBook.Author = "Abishek";
+Console.WriteLine($"Book: {myBook.Title} by {myBook.Author}");
+
+}
+
+
+#               Static Constructors
+
+A static constructor is used to initialize any static data, or 
+to perform a particular action that needs to be performed only 
+once. It's called automatically before the first instance is 
+created or any static members are referenced. 
+A static constructor is called at most once.
+
+public class Settings
+{
+    public static string AppName { get; set; }
+
+    // Static Constructor
+    static Settings()
+    {
+        AppName = "My Awesome App";
+    }
+    static void Main(){
+        Console.WriteLine(Settings.AppName);
+    }
+}
+
+--->Static constructors have the following properties:
+
+    ->A static constructor doesn't take access modifiers or have parameters.
+    ->A class or struct can only have one static constructor.
+    ->Static constructors can't be inherited or overloaded.
+    ->A static constructor can't be called directly and is only meant to be called by the common language runtime (CLR).
+
+
+#                   Finalizers
+
+A finalizer (also known as a destructor) is a special method in C# that is used
+ to clean up resources before an object is destroyed. It’s useful when your object 
+ holds unmanaged resources, like file handles or database connections, and you need 
+ to release them properly.
+
+  Key Points About Finalizers:
+
+->Finalizers cannot be defined in structs. They are only used with classes.
+
+->A class can only have one finalizer.
+
+->Finalizers cannot be inherited or overloaded.
+
+->Finalizers cannot be called. They are invoked automatically.
+
+->A finalizer does not take modifiers or have parameters.
+
+->Finalizers look like constructors but with a tilde ~ before the class name.
+
+
+For example, the following is a declaration of a finalizer for the Car class.
+
+class Car
+{
+    ~Car()  // finalizer
+    {
+        // cleanup statements...
+    }
+}
+
+When to Use a Finalizer?
+
+A finalizer should be used when your class works with unmanaged resources—things 
+that the .NET Garbage Collector cannot handle automatically. 
+Examples of unmanaged resources include:
+
+1. File Handles: If your class opens files and doesn’t properly close them, 
+                 it can cause problems like locked files.
+
+2. Database Connections: If you open a connection to a database, you need to 
+                        make sure it gets closed, even if the program crashes.
+
+3. Network Connections: If your class uses sockets or communicates over the internet, 
+                        you must release those resources properly.
+
+
+Simple Example
+Imagine you have a class that works with a file:
+
+public class FileHandler
+{
+    private System.IO.FileStream fileStream;
+
+    public FileHandler(string filePath)
+    {
+        fileStream = new System.IO.FileStream(filePath, System.IO.FileMode.OpenOrCreate);
+    }
+
+    // Finalizer ensures the file is closed
+    ~FileHandler()
+    {
+        fileStream?.Close(); // Close the file if not already closed
+        Console.WriteLine("Finalizer called: File closed.");
+    }
+}
+
+If someone forgets to close the file manually, the finalizer ensures it gets closed when the object is destroyed.
+
+
+
+
+
+
+#                        Dynamic Binding:
+
+C# dynamic is a keyword that is used to make a property or a method dynamic. When we make dynamic type, compiler 
+does not check it at compile-time. Compiler checks it only at run time.
+The purpose of using dynamic binding is to avoid compile time checking of the code.
+
+
+
+
+
+
+

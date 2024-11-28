@@ -180,6 +180,14 @@ Here, 'A' is a character.
 
 
 
+# Statements :
+
+    What Are Statements?
+    ->A statement in C# is an instruction that the program executes to perform an action. 
+      Every statement ends with a semicolon (;), making it clear where one instruction ends 
+      and the next begins.Think of statements as steps in a recipe—each one tells the computer 
+      what to do next.
+
 
 
 
