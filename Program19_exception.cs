@@ -1,6 +1,6 @@
 //WAP to create and throw your own custom exception.
 
-
+/*
 using System;
 
 //We create a class named MyCustomException that inherits from System.Exception.
@@ -45,6 +45,7 @@ public class MyCustomException : Exception
     {
     }
 }
+
 
 What’s happening here?
 ->MyCustomException is a new class that you are creating.
