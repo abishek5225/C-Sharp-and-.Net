@@ -4,7 +4,7 @@ parameterized constructor to initialize data members. Derive two classes Rectang
 Triangle from Polygon class with appropriate member function to calculate area of each
 rectangle and triangle.
 */
-
+/*
 using System.Drawing;
 
 class Polygon{
@@ -59,3 +59,4 @@ class Program{
         Console.WriteLine("Area of Triangle: " + tri.CalculateArea());
     }
 }
+*/
