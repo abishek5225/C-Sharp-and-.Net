@@ -2,7 +2,7 @@
 Write a C# program to input two numbers. If both numbers are equal then throw your
 own custom exception. Otherwise calculate sum of two numbers.
 */
-
+/*
 using System;
 
 
@@ -52,3 +52,4 @@ using System;
             }
         }
     }
+*/
