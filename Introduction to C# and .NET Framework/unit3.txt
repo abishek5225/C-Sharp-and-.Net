@@ -828,3 +828,257 @@ When to Use object?
 
     When dealing with data that might change types at runtime.
 
+
+
+#                       struct
+
+    In C#, a struct is a data type that can hold data, similar to a class, but there are some important differences. 
+    A struct is a value type, which means it stores its data directly. When you assign a struct to a new variable, 
+    the data is copied rather than referenced.
+
+Key Points About Structs
+
+1.  Structs are value types, meaning that when you assign a struct to a new variable, a copy of the data is made. 
+    This is different from classes, which are reference types (where variables hold references to the same object in memory).
+
+2.  A struct is defined using the struct keyword. Unlike classes, structs cannot inherit from other structs or classes, 
+    and they cannot be used as a base type for other types.
+
+3.  Structs are typically more memory-efficient than classes because they do not require heap memory (they are allocated on the stack).
+
+4.  Structs do not have a default constructor (i.e., a constructor with no parameters) like classes. However, they do have an implicit 
+    default constructor that initializes all fields to their default values.
+
+
+    Example of Struct:
+
+struct Demo{
+    public int X;
+    public int Y;
+
+    //constructor to initialize struct
+    public Demo(int x, int y){
+        X=x;
+        Y=y;
+    }
+
+    public void Display(){
+        Console.WriteLine($"Point ({X}, {Y})");
+    }
+}
+class Program{
+    static void Main(){
+        //Creating instance of Demo struct
+        Demo obj1 = new obj(10,20);
+        obj1.Display(); // output: Point (10,20)
+
+        Demo obj2 = obj1;
+        obj2.X = 15;    //modified obj2
+        obj2.Display(); //output: Point (15,20)
+
+         obj1.Display(); // output: Point (10,20)        
+    }
+}
+
+code Highlights:
+
+ We created a Demo struct with X and Y fields, and a 
+ constructor to set those values.
+
+ When we assigned obj1 to obj2, we made a copy of obj1's data, 
+ so changing obj2.X doesn’t affect obj1.X. This is because structs are value types.
+        
+
+
+#                       Access Modifiers
+
+Access modifiers in C# define the visibility and accessibility of classes, methods, properties, fields, 
+and other members. They control how and where you can use these members within your code.
+C# has several access modifiers that determine the scope of access to a class or its members.
+They are:-
+
+public:
+
+Accessible from anywhere (inside and outside the class or assembly).
+Used when you want a class or member to be fully accessible from other classes, even from other projects.
+
+private:
+
+Accessible only within the same class.
+Use private for data members or methods that should not be exposed to the outside world. It helps to implement encapsulation.
+
+protected:
+
+Accessible within the same class and derived classes (i.e., subclasses).
+Use protected for members that should be visible to derived classes but hidden from outside.
+
+
+
+#                       interfaces
+
+An interface in C# is like a contract that defines a set of methods, properties, or events that a class must implement. However, 
+unlike classes, interfaces do not contain any implementation for these methods—just their signatures. This means that an interface 
+specifies what actions should be done, but not how to do them.
+
+Syntax of an Interface
+To declare an interface, use the interface keyword:
+
+public interface IAnimal
+{
+    void Speak();  // no body
+    void Eat();    // no body
+}
+
+Implementing an Interface in a Class
+
+public class Dog : IAnimal
+{
+    // Implementing Speak method
+    public void Speak()
+    {
+        Console.WriteLine("Woof! Woof!");
+    }
+
+    // Implementing Eat method
+    public void Eat()
+    {
+        Console.WriteLine("The dog is eating.");
+    }
+}
+
+public class Cat : IAnimal
+{
+    // Implementing Speak method
+    public void Speak()
+    {
+        Console.WriteLine("Meow!");
+    }
+
+    // Implementing Eat method
+    public void Eat()
+    {
+        Console.WriteLine("The cat is eating.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IAnimal myDog = new Dog();   // Create a Dog object
+        IAnimal myCat = new Cat();   // Create a Cat object
+
+        myDog.Speak();  // Output: Woof! Woof!
+        myDog.Eat();    // Output: The dog is eating.
+
+        myCat.Speak();  // Output: Meow!
+        myCat.Eat();    // Output: The cat is eating.
+    }
+}
+
+
+ Polymorphism with Interfaces
+
+ public interface IAnimal
+{
+    void Speak();
+}
+
+public class Dog : IAnimal
+{
+    public void Speak()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+public class Cat : IAnimal
+{
+    public void Speak()
+    {
+        Console.WriteLine("Meow!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an array of IAnimal
+        IAnimal[] animals = { new Dog(), new Cat() };
+
+        // Loop through the array and call Speak on each object
+        foreach (IAnimal animal in animals)
+        {
+            animal.Speak();  // Output: Woof! Meow!
+        }
+    }
+}
+
+Both Dog and Cat implement the IAnimal interface. You can store them in an array of IAnimal and 
+call the Speak() method on each one, despite them being different types.
+
+
+#                           Enums
+
+An enum (short for enumeration) is a way to define a set of named values that represent a collection of related constants. 
+It makes your code more readable and meaningful by replacing simple numbers or strings with descriptive names.
+For example, instead of using numbers like 1, 2, or 3 to represent days of the week, you can use an enum with names like 
+Monday, Tuesday, and Wednesday. This makes the code easier to understand and reduces mistakes.
+
+Example:
+
+using System;
+
+public enum Day
+{
+    Sunday = 1,
+    Monday = 2,
+    Tuesday = 3,
+    Wednesday = 4,
+    Thursday = 5,
+    Friday = 6,
+    Saturday = 7
+}
+
+class Program
+{
+    static void Main()
+    {
+        Day today = Day.Monday;  // Assigning an enum value
+
+        if (today == Day.Monday)
+        {
+            Console.WriteLine("It's Monday!");
+        }
+    }
+}
+
+Traffic light Example:
+public enum TrafficLight
+{
+    Red = 1,
+    Yellow = 2,
+    Green = 3
+}
+
+class Program
+{
+    static void Main()
+    {
+        TrafficLight light = TrafficLight.Red;
+
+        switch (light)
+        {
+            case TrafficLight.Red:
+                Console.WriteLine("Stop");
+                break;
+            case TrafficLight.Yellow:
+                Console.WriteLine("Caution");
+                break;
+            case TrafficLight.Green:
+                Console.WriteLine("Go");
+                break;
+        }
+    }
+}
