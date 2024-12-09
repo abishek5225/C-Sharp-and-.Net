@@ -1,7 +1,7 @@
 /*
 Write a C# program to handle NullReferenceException.
 */
-
+/*
 class Program33{
     static void Main(){
         try{
@@ -18,3 +18,4 @@ class Program33{
         }
     }
 }
+*/

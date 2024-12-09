@@ -64,6 +64,32 @@ person.Introduce();
 Hi, I am Abishek and I am 22 years old.
 
 
+#                   What is reference?
+
+    In C#, when you create an object, the variable that holds it is 
+    usually a reference to that object in memory. This means multiple 
+    variables can refer to the same object. If you change the object 
+    through one variable, the change is visible through other variables 
+    that reference the same object.
+
+    Example in Real Life:
+    Imagine you have a book in a library. Instead of carrying the book everywhere, 
+    you note its location (reference) in the library catalog. With this reference, 
+    you can find and use the book whenever needed. The book itself stays in one place, 
+    but you can access it through the reference.
+
+
+
+#                   this Referance
+The this keyword in C# is a special reference that represents the 
+current instance of the class. It's used to refer to the instance 
+variables, methods, or constructors of the class you're working within.
+
+The this keyword in C# is like a way for an object to refer to itself. 
+Imagine every object has a mirror, and when it looks into that mirror, 
+it sees itself — that's what this does. It points to the current object 
+(the instance of the class) that is being used.
+
 
 #                    Properties
 
@@ -83,6 +109,80 @@ myBook.Author = "Abishek";
 Console.WriteLine($"Book: {myBook.Title} by {myBook.Author}");
 
 }
+
+
+#               Indexers
+
+    An indexer allows an object of a class or struct to be indexed like an array. 
+    Instead of using methods to access elements, you can use square brackets ([]) to get or set values in a class.
+
+    For example:
+    Imagine you have a class that stores multiple values, like names or numbers. Normally, 
+    you’d create methods like GetName() or SetName() to access these values. With indexers, 
+    you don’t need those methods! Instead, you can use square brackets ([]), just like you do with arrays.
+
+    Program to make you more clear abot Indexers
+    Example 1: Without Indexers
+
+    class NamesCollection
+{
+    private string[] names = new string[5];
+
+    public string GetName(int index)
+    {
+        return names[index];
+    }
+
+    public void SetName(int index, string value)
+    {
+        names[index] = value;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        NamesCollection names = new NamesCollection();
+
+        // Using methods to set and get values
+        names.SetName(0, "Abishek");
+        Console.WriteLine(names.GetName(0)); // Output: Abishek
+    }
+}
+
+With Indexers:
+
+class NamesCollection
+{
+    private string[] names = new string[5];
+
+    // Indexer to get and set names
+    public string this[int index]
+    {
+        get { return names[index]; } // Get a name
+        set { names[index] = value; } // Set a name
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        NamesCollection names = new NamesCollection();
+
+        // Use the indexer to set values
+        names[0] = "Abishek"; // This is like SetName(0, "Abishek")
+        names[1] = "Sita";
+
+        // Use the indexer to get values
+        Console.WriteLine(names[0]); // Output: Abishek
+        Console.WriteLine(names[1]); // Output: Sita
+    }
+}
+
+
+
 
 
 #               Static Constructors
@@ -192,13 +292,539 @@ If someone forgets to close the file manually, the finalizer ensures it gets clo
 
 #                        Dynamic Binding:
 
-C# dynamic is a keyword that is used to make a property or a method dynamic. When we make dynamic type, compiler 
-does not check it at compile-time. Compiler checks it only at run time.
-The purpose of using dynamic binding is to avoid compile time checking of the code.
+In C# dynamic is a keyword that is used to make a property or a method dynamic. 
+When we make dynamic type, compilerdoes not check it at compile-time. Compiler 
+checks it only at run time. The purpose of using dynamic binding is to avoid 
+compile time checking of the code.
 
 
 
+#                           Operator Overloading
+
+
+Object-oriented programming concepts such as Polymorphism, which means one name 
+having different forms and implementations. It allows the variables or the object 
+to take different kinds of forms while executing the code. It is mainly used when 
+you want the method property not to be similar to the given arguments, rather want 
+a different order of execution when one name can be used with different types of 
+execution methods and properties. This can be achieved in a program with different 
+types of parameters and their count. 
+
+Key Points About Operator Overloading:-
+
+
+Static Method:
+Operator overloading methods must be static.
+
+Custom Type:
+At least one operand must be of the class or struct type where the operator is being overloaded.
+
+Keyword operator:
+You use the operator keyword to define an overloaded operator.
+
+program:
+
+class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    // Overloading the + operator
+    public static Point operator +(Point p1, Point p2)
+    {
+        return new Point(p1.X + p2.X, p1.Y + p2.Y);
+    }
+
+    public override string ToString()
+    {
+        return $"({X}, {Y})";
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Point p1 = new Point(2, 3);
+        Point p2 = new Point(4, 5);
+
+        Point result = p1 + p2; // Using the overloaded + operator
+        Console.WriteLine(result); // Output: (6, 8)
+    }
+}
+
+
+#                   Inheritance
+
+Inheritance is a fundamental concept in object-oriented programming (OOP) 
+where one class (called the derived or child class) can acquire the properties 
+and methods of another class (called the base or parent class). This allows code 
+reuse and establishes a relationship between classes.
+
+Why Use Inheritance?
+Code Reuse:
+Common functionality can be written once in a base class and reused by derived classes.
+
+Extensibility:
+You can add new features to a derived class without modifying the base class.
+
+Polymorphism:
+Inheritance enables polymorphism, where a derived class can override methods of the base class to provide specialized behavior.
+
+
+Syntax of Inheritance in C# :-
+In C#, you use the : symbol to define inheritance.
+
+class BaseClass
+{
+    // Members of the base class
+}
+
+class DerivedClass : BaseClass
+{
+    // Members of the derived class
+}
+
+
+1. Single Inheritance
+In single inheritance, a class inherits from one base class. 
+This is the simplest form of inheritance.
+
+Example:
+
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Eat();  // Inherited from Animal
+        dog.Bark(); // Defined in Dog
+    }
+}
+
+2. Multilevel Inheritance
+In multilevel inheritance, a class inherits from a derived class, creating a chain of inheritance.
+
+Example:
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+class Puppy : Dog
+{
+    public void Weep()
+    {
+        Console.WriteLine("Puppy is weeping.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Puppy puppy = new Puppy();
+        puppy.Eat();  // From Animal
+        puppy.Bark(); // From Dog
+        puppy.Weep(); // From Puppy
+    }
+}
+
+3. Hierarchical Inheritance
+In hierarchical inheritance, multiple classes inherit from a single base class.
+
+Example:
+
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Cat is meowing.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        dog.Eat();  // From Animal
+        dog.Bark(); // Defined in Dog
+
+        cat.Eat();  // From Animal
+        cat.Meow(); // Defined in Cat
+    }
+}
+
+4. Multiple Inheritance (Not Supported Directly in C#)
+C# does not support multiple inheritance (a class inheriting from multiple base classes) 
+to avoid ambiguity. However, it can be achieved using interfaces.
+
+interface IFlyable
+{
+    void Fly();
+}
+
+interface ISwimmable
+{
+    void Swim();
+}
+
+class Bird : IFlyable, ISwimmable
+{
+    public void Fly()
+    {
+        Console.WriteLine("Bird is flying.");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("Bird is swimming.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Bird bird = new Bird();
+        bird.Fly();
+        bird.Swim();
+    }
+}
+
+#                        Abstract Classes and Methods
+
+Abstract Class:
+
+An abstract class is a special type of class that cannot be 
+instantiated(You cannot create an object of an abstract class. 
+It is meant to be inherited by other classes.) directly. 
+It serves as a blueprint for derived classes and often contains 
+one or more abstract methods, which are methods declared without implementation.
+
+
+Abstract Methods:
+
+1.  No Implementation in the Base Class:
+    An abstract method is declared but not implemented in the abstract class.
+
+2.  Must Be Overridden:
+    Derived classes must override all abstract methods of the base class
+
+
+Example: Abstract Class and Methods:
+
+// Abstract Class
+abstract class Shape
+{
+    public string Name { get; set; }
+
+    // Abstract Method
+    public abstract double CalculateArea();
+
+    // Concrete Method
+    public void Display()
+    {
+        Console.WriteLine($"Shape: {Name}");
+    }
+}
+
+// Derived Class: Circle
+class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    public Circle(double radius)
+    {
+        Name = "Circle";
+        Radius = radius;
+    }
+
+    // Overriding the abstract method
+    public override double CalculateArea()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+// Derived Class: Rectangle
+class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public Rectangle(double width, double height)
+    {
+        Name = "Rectangle";
+        Width = width;
+        Height = height;
+    }
+
+    // Overriding the abstract method
+    public override double CalculateArea()
+    {
+        return Width * Height;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Shape circle = new Circle(5);
+        circle.Display();
+        Console.WriteLine($"Area: {circle.CalculateArea()}");
+
+        Shape rectangle = new Rectangle(4, 6);
+        rectangle.Display();
+        Console.WriteLine($"Area: {rectangle.CalculateArea()}");
+    }
+}
 
 
 
+#                      Base Keyword
+
+The base keyword in C# is used to access members of the base class (parent class) 
+from within a derived class (child class). It serves as a bridge to interact with 
+the base class's methods, properties, constructors, or fields.
+
+Accessing Base Class Members
+In this example, the base keyword is used to call the base class method inside an overridden method.
+
+class Animal
+{
+    public virtual void Speak()
+    {
+        Console.WriteLine("Animal makes a sound.");
+    }
+}
+
+class Dog : Animal
+{
+    public override void Speak()
+    {
+        base.Speak(); // Call the base class's Speak method
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Speak();
+    }
+}
+
+
+Calling the Base Class Constructor
+In this example, the base keyword is used to call a parameterized constructor of the base class.
+
+class Animal
+{
+    public string Name { get; set; }
+
+    public Animal(string name)
+    {
+        Name = name;
+        Console.WriteLine($"Animal constructor called. Name: {Name}");
+    }
+}
+
+class Dog : Animal
+{
+    public Dog(string name) : base(name) // Call base class constructor
+    {
+        Console.WriteLine("Dog constructor called.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog("Buddy");
+    }
+}
+
+
+
+#                   Overloading
+
+Overloading allows you to define multiple methods or operators with the same name in the 
+same class, but with different parameters. This improves code readability and flexibility.
+
+For better understanding, Overloading can be defined as same person(methods) having different behavior(parameters).
+
+class Calculator
+{
+    // Add two integers
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    // Add three integers
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    // Add two doubles
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Calculator calc = new Calculator();
+
+        Console.WriteLine(calc.Add(2, 3));          
+        Console.WriteLine(calc.Add(2, 3, 4));  
+        Console.WriteLine(calc.Add(2.5, 3.7));  
+    }
+}
+
+
+#                       Object types
+
+In C#, object is the most general type. It is the base type from which all other types (such as int, string, bool, and even custom types) are derived. 
+This means that every single type in C# can be assigned to an object variable.
+
+An object can hold any kind of data, whether it is a number, a string, or even a custom class object. This makes it very flexible.
+
+When you store a value type (like int or float) into an object, it’s called boxing. When you retrieve that value, it’s called unboxing.
+
+The object class provides some useful methods that all types have, such as ToString(), Equals(), and GetType().
+
+
+Example: Storing Different Types in object
+
+class Program
+{
+    static void Main()
+    {
+        object obj1 = 5;          
+        object obj2 = "Hello";     
+        object obj3 = new DateTime(2024, 12, 9);
+
+        Console.WriteLine(obj1); 
+        Console.WriteLine(obj2);  
+        Console.WriteLine(obj3);  
+    }
+}
+
+note: Here, all types (like int, string, and DateTime) are assigned to object variables. This is possible because all types in C# derive from object.
+
+
+->  Boxing and Unboxing
+    Boxing is the process of converting a value type (like int) into an object (reference type).
+
+    int number = 10;
+    object obj = number;  // Boxing: Converting int to object
+
+->  Unboxing is the process of converting an object back to a value type.
+
+    object obj = 10;  // Boxing
+    int number = (int)obj;  // Unboxing: Converting object back to int
+
+Important Methods in object:
+
+->  ToString():
+    Converts the object to a string representation.
+    Example:
+
+    object obj = 123;
+    Console.WriteLine(obj.ToString());  // Output: 123
+
+->  Equals():
+    Compares two objects for equality.
+    Example:
+
+    object obj1 = 5;
+    object obj2 = 5;
+    Console.WriteLine(obj1.Equals(obj2));  // Output: True
+
+->  GetType():
+    Returns the type of the object.
+    Example:
+
+    object obj = 10;
+    Console.WriteLine(obj.GetType());  // Output: System.Int32
+
+->  GetHashCode():
+    Returns a unique identifier (hash code) for the object, useful in collections.
+    Example:
+
+    object obj = "Hello";
+    Console.WriteLine(obj.GetHashCode());  // Output: hash code of the string
+
+
+When to Use object?
+
+    When you don't know the exact type you will be working with, or when you want to write 
+    general code that can handle multiple types of data.
+
+    When working with collections or structures that need to handle different types of data 
+    (e.g., ArrayList or older collections in C#).
+
+    When dealing with data that might change types at runtime.
 
