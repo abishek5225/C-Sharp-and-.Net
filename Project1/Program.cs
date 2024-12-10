@@ -1,4 +1,8 @@
-﻿using System;
+﻿// this is the basic project but you can learn lot of implementation from here
+//learning tutorial is not always fun you have to built something with the knowlwdge you have currently
+//if you always use to learn from tutorials daily but do not used them to create something then you'll go inside tutorial loop
+ 
+using System;
 using System.Collections.Generic;
 
 namespace ContactManager{
