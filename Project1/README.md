@@ -1,0 +1,1 @@
+This is Contact Manager project a console application built using C#. It helps users manage contacts by allowing them to add, view, search, and delete contact information like names, phone numbers, and email addresses. This project is a great example of object-oriented programming and user interaction in C#.
