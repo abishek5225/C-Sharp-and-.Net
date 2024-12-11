@@ -1,0 +1,15 @@
+E:\c#\Project2\obj\Debug\net8.0\Project2.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Project2\obj\Debug\net8.0\Project2.AssemblyInfoInputs.cache
+E:\c#\Project2\obj\Debug\net8.0\Project2.AssemblyInfo.cs
+E:\c#\Project2\obj\Debug\net8.0\Project2.csproj.CoreCompileInputs.cache
+E:\c#\Project2\obj\Debug\net8.0\Project2.sourcelink.json
+E:\c#\Project2\bin\Debug\net8.0\Project2.exe
+E:\c#\Project2\bin\Debug\net8.0\Project2.deps.json
+E:\c#\Project2\bin\Debug\net8.0\Project2.runtimeconfig.json
+E:\c#\Project2\bin\Debug\net8.0\Project2.dll
+E:\c#\Project2\bin\Debug\net8.0\Project2.pdb
+E:\c#\Project2\obj\Debug\net8.0\Project2.dll
+E:\c#\Project2\obj\Debug\net8.0\refint\Project2.dll
+E:\c#\Project2\obj\Debug\net8.0\Project2.pdb
+E:\c#\Project2\obj\Debug\net8.0\Project2.genruntimeconfig.cache
+E:\c#\Project2\obj\Debug\net8.0\ref\Project2.dll
