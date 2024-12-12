@@ -1,0 +1,52 @@
+In simple words, events are a way to signal that something has happened.
+
+Here we will take an example of an event, where Microsoft launches the events for the developer.
+In this Event, Microsoft wants to aware the developer about the feature of the existing or new products. 
+For this, Microsoft will use Email or other advertisement options to aware the developer about the Event.
+So, in this case, Microsoft will work as a publisher who raises the Event and notifies the developers about it.
+Developers will work as the subscriber of the Event who handles the Event.
+
+Publisher: The object that raises (triggers) the event.
+Subscriber: The object(s) that receive the notification and react to the event.
+
+In C#, event handler will take the two parameters as input and return the void.
+The first parameter of the Event is also known as the source, which will publish the object.
+The publisher will decide when we have to raise the Event, and the subscriber will determine what 
+response we have to give.
+An event can have multiple subscribers (methods) listening to it.
+Subscribers can only add or remove event handlers; they cannot invoke the event directly.
+
+
+Steps for implementing the Event:
+
+For the declaration of the Event in the class, firstly, the event type of the delegate must be declared.
+
+    public delegate void CellEventHandler(object sender, EventArgs e);
+
+
+public class Button
+{
+    public event Action Click; // Define an event using Action delegate
+
+    public void OnClick()
+    {
+        if (Click != null)
+        {
+            Click(); // Raise the event
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Button button = new Button();
+
+        // Subscribe to the Click event
+        button.Click += () => Console.WriteLine("Button was clicked!");
+
+        // Simulate a button click
+        button.OnClick();
+    }
+}
