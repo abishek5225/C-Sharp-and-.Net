@@ -1,0 +1,64 @@
+A delegate in C# is like a pointer to a method. Delegate is an object which refers to a method.
+In simple terms: A delegate acts as a middleman that "points" to a method. You can use it to call a method indirectly.
+
+Why Use Delegates?
+
+->  You can use delegates to define which methods to call at runtime instead of hardcoding them.
+
+->  Delegates are used to execute code after something else happens, such as completing a task.
+
+->  Delegates are the foundation of events in C#.
+
+->  Delegates can be chained together as two or more methods can be called on a single event.
+
+->  It doesn’t care about the class of the object that it references.
+
+
+                    Declaration of Delegates
+
+Delegate type can be declared using the delegate keyword. Once a delegate is declared, 
+delegate instance will refer and call those methods whose return type and parameter-list 
+matches with the delegate declaration.
+
+Syntax:
+
+[modifier] delegate [return_type] [delegate_name] ([parameter]);
+
+modifier: It is the required modifier which defines the access of delegate and it is optional to use.
+delegate: It is the keyword which is used to define the delegate.
+return_type: It is the type of value returned by the methods which the delegate will be going to call. It can be void. A method must have the same return type as the delegate.
+delegate_name: It is the user-defined name or identifier for the delegate.
+parameter: This contains the parameters which are required by the method when called through the delegate. 
+
+Example: 
+
+"public" is the modifier
+"int" is return type
+"GeeksForGeeks" is delegate name
+"(int a, int b, int c)" are the parameters
+
+public delegate int GeeksForGeeks(int a, int b, int c);
+
+Note: A delegate will call only a method which agrees with its signature and return type. 
+A method can be a static method associated with a class or can be an instance method 
+associated with an object, it doesn’t matter. 
+
+Instantiation & Invocation of Delegates
+After declaring a delegate, a delegate object is created with the help of new keyword. 
+Once a delegate is instantiated, a method call made to the delegate is pass by the 
+delegate to that method. The parameters passed to the delegate by the caller are passed 
+to the method, and the return value, if any, from the method, is returned to the caller 
+by the delegate. This is known as invoking the delegate. 
+Syntax:
+ 
+ [delegate_name]  [instance_name] = new [delegate_name](calling_method_name);
+
+ Example: 
+ 
+
+Demo demoobj = new Demo (add);
+       // here,
+       // "Demo" is delegate name. 
+       // "demoobj" is instance_name
+       // "add" is the calling method.
+
