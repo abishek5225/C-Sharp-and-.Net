@@ -62,3 +62,16 @@ Demo demoobj = new Demo (add);
        // "demoobj" is instance_name
        // "add" is the calling method.
 
+
+
+
+#                           Multicasting of a Delegate
+
+
+Multicasting of delegate is an extension of the normal delegate(sometimes termed as Single Cast Delegate). 
+It helps the user to point more than one method in a single call.
+Properties: 
+Delegates are combined and when you call a delegate then a complete list of methods is called.
+All methods are called in First in First Out(FIFO) order.
+‘+’ or ‘+=’ Operator is used to add the methods to delegates.
+‘–’ or ‘-=’ Operator is used to remove the methods from the delegates list.
