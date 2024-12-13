@@ -1,0 +1,15 @@
+E:\c#\Project3\obj\Debug\net8.0\Project3.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Project3\obj\Debug\net8.0\Project3.AssemblyInfoInputs.cache
+E:\c#\Project3\obj\Debug\net8.0\Project3.AssemblyInfo.cs
+E:\c#\Project3\obj\Debug\net8.0\Project3.csproj.CoreCompileInputs.cache
+E:\c#\Project3\obj\Debug\net8.0\Project3.sourcelink.json
+E:\c#\Project3\bin\Debug\net8.0\Project3.exe
+E:\c#\Project3\bin\Debug\net8.0\Project3.deps.json
+E:\c#\Project3\bin\Debug\net8.0\Project3.runtimeconfig.json
+E:\c#\Project3\bin\Debug\net8.0\Project3.dll
+E:\c#\Project3\bin\Debug\net8.0\Project3.pdb
+E:\c#\Project3\obj\Debug\net8.0\Project3.dll
+E:\c#\Project3\obj\Debug\net8.0\refint\Project3.dll
+E:\c#\Project3\obj\Debug\net8.0\Project3.pdb
+E:\c#\Project3\obj\Debug\net8.0\Project3.genruntimeconfig.cache
+E:\c#\Project3\obj\Debug\net8.0\ref\Project3.dll
