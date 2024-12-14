@@ -1,0 +1,16 @@
+A Lambda Expression in C# is a concise way to represent a method (or function) using a shorter syntax. 
+It is particularly used with delegates, LINQ, and functional programming.
+
+Why Use Lambda Expressions?
+Makes code cleaner and avoids writing separate methods.
+You don’t need to define a method name.
+Especially useful with small, simple operations.
+
+Syntax of Lambda Expressions:
+
+(parameters) => expression
+
+parameters: Input values to the function.
+=>: "Goes to" operator, separates parameters from the function body.
+expression: The logic or statement.
+

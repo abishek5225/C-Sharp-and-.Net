@@ -1,0 +1,15 @@
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.AssemblyInfoInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.AssemblyInfo.cs
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.csproj.CoreCompileInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.sourcelink.json
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\bin\Debug\net8.0\Programs.exe
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\bin\Debug\net8.0\Programs.deps.json
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\bin\Debug\net8.0\Programs.runtimeconfig.json
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\bin\Debug\net8.0\Programs.dll
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\bin\Debug\net8.0\Programs.pdb
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.dll
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\refint\Programs.dll
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.pdb
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\Programs.genruntimeconfig.cache
+E:\c#\Introduction to C# and .NET Framework\Lambda Expressions\Programs\obj\Debug\net8.0\ref\Programs.dll
