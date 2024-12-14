@@ -1,0 +1,30 @@
+Exception Handling in C# is a mechanism to handle errors (unexpected situations) 
+that occur during program execution. It allows you to respond to problems gracefully 
+instead of crashing the application.
+
+Why Use Exception Handling?
+Prevents program crashes.
+Provides meaningful error messages.
+Allows recovery from errors.
+
+Common Keywords in Exception Handling
+
+try: Code that may throw an exception goes here.
+catch: Handles the exception if it occurs.
+finally: Code that always runs, regardless of whether an exception occurs.
+throw: Used to throw an exception manually.
+
+Basic Syntax:
+
+try
+{
+    // Code that might cause an exception
+}
+catch (ExceptionType ex)
+{
+    // Code to handle the exception
+}
+finally
+{
+    // Code that always runs (optional)
+}

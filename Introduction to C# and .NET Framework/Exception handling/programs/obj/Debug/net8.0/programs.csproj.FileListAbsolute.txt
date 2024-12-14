@@ -1,0 +1,15 @@
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\bin\Debug\net8.0\programs.exe
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\bin\Debug\net8.0\programs.deps.json
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\bin\Debug\net8.0\programs.runtimeconfig.json
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\bin\Debug\net8.0\programs.dll
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\bin\Debug\net8.0\programs.pdb
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.AssemblyInfoInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.AssemblyInfo.cs
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.csproj.CoreCompileInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.sourcelink.json
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.dll
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\refint\programs.dll
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.pdb
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\programs.genruntimeconfig.cache
+E:\c#\Introduction to C# and .NET Framework\Exception handling\programs\obj\Debug\net8.0\ref\programs.dll
