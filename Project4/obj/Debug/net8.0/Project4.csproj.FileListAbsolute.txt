@@ -1,0 +1,15 @@
+E:\c#\Project4\obj\Debug\net8.0\Project4.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Project4\obj\Debug\net8.0\Project4.AssemblyInfoInputs.cache
+E:\c#\Project4\obj\Debug\net8.0\Project4.AssemblyInfo.cs
+E:\c#\Project4\obj\Debug\net8.0\Project4.csproj.CoreCompileInputs.cache
+E:\c#\Project4\obj\Debug\net8.0\Project4.sourcelink.json
+E:\c#\Project4\bin\Debug\net8.0\Project4.exe
+E:\c#\Project4\bin\Debug\net8.0\Project4.deps.json
+E:\c#\Project4\bin\Debug\net8.0\Project4.runtimeconfig.json
+E:\c#\Project4\bin\Debug\net8.0\Project4.dll
+E:\c#\Project4\bin\Debug\net8.0\Project4.pdb
+E:\c#\Project4\obj\Debug\net8.0\Project4.dll
+E:\c#\Project4\obj\Debug\net8.0\refint\Project4.dll
+E:\c#\Project4\obj\Debug\net8.0\Project4.pdb
+E:\c#\Project4\obj\Debug\net8.0\Project4.genruntimeconfig.cache
+E:\c#\Project4\obj\Debug\net8.0\ref\Project4.dll
