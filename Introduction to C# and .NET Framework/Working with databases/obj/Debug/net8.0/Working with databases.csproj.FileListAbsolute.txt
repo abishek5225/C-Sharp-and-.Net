@@ -1,0 +1,38 @@
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.AssemblyInfoInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.AssemblyInfo.cs
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.csproj.CoreCompileInputs.cache
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.sourcelink.json
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Working with databases.exe
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Working with databases.deps.json
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Working with databases.runtimeconfig.json
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Working with databases.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Working with databases.pdb
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\refint\Working with databases.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.pdb
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.genruntimeconfig.cache
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\ref\Working with databases.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working with databases.csproj.AssemblyReference.cache
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\Google.Protobuf.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\MySql.Data.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.IO.Pipelines.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\ZstdSharp.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+E:\c#\Introduction to C# and .NET Framework\Working with databases\obj\Debug\net8.0\Working .88807884.Up2Date
