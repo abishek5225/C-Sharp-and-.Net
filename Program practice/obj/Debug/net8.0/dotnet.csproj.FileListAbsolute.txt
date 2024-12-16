@@ -27,3 +27,41 @@ E:\c#\bin\Debug\net8.0\dotnet.dll
 E:\c#\bin\Debug\net8.0\dotnet.pdb
 E:\c#\obj\Debug\net8.0\dotnet.genruntimeconfig.cache
 E:\c#\obj\Debug\net8.0\ref\dotnet.dll
+E:\c#\Program practice\bin\Debug\net8.0\dotnet.exe
+E:\c#\Program practice\bin\Debug\net8.0\dotnet.deps.json
+E:\c#\Program practice\bin\Debug\net8.0\dotnet.runtimeconfig.json
+E:\c#\Program practice\bin\Debug\net8.0\dotnet.dll
+E:\c#\Program practice\bin\Debug\net8.0\dotnet.pdb
+E:\c#\Program practice\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\c#\Program practice\bin\Debug\net8.0\Google.Protobuf.dll
+E:\c#\Program practice\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+E:\c#\Program practice\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+E:\c#\Program practice\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+E:\c#\Program practice\bin\Debug\net8.0\MySql.Data.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.IO.Pipelines.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\c#\Program practice\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\c#\Program practice\bin\Debug\net8.0\ZstdSharp.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\c#\Program practice\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.csproj.AssemblyReference.cache
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.GeneratedMSBuildEditorConfig.editorconfig
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.AssemblyInfoInputs.cache
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.AssemblyInfo.cs
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.csproj.CoreCompileInputs.cache
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.sourcelink.json
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.csproj.Up2Date
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.dll
+E:\c#\Program practice\obj\Debug\net8.0\refint\dotnet.dll
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.pdb
+E:\c#\Program practice\obj\Debug\net8.0\dotnet.genruntimeconfig.cache
+E:\c#\Program practice\obj\Debug\net8.0\ref\dotnet.dll
