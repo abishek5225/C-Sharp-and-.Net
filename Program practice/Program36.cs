@@ -1,7 +1,7 @@
 /*
 Indexers
 */
-
+/*
 class Names{
     private string[] names = new string[5];
 
@@ -23,3 +23,4 @@ class Program36{
         Console.WriteLine(obj[1]);
     }
 }
+*/

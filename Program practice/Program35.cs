@@ -1,4 +1,7 @@
-
+/*
+Write a program in C# Sharp to create a list of numbers and display the numbers greater
+than 80 as output using LINQ. Also display all selected numbers in descending order.
+*/
 
 /*
 using System;
