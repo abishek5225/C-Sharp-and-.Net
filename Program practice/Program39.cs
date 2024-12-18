@@ -1,7 +1,7 @@
 /*
 Write a program to select employees whose salary is greater than 20,000 and whose address is Kathmandu using LINQ.
 */
-
+/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,3 +30,4 @@ class Program39{
 
     }
 }
+*/
