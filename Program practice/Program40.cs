@@ -29,6 +29,16 @@ class Complex{
 
 class Program{
     static void Main(){
-        
+        Complex c1 = new Complex(3.5, 2.5);
+        Complex c2 = new Complex(1.5, 3.5);
+
+        Complex sum = c1 + c2;
+
+        Complex difference = c1-c2;
+
+        Console.WriteLine("First Number: "+c1);
+        Console.WriteLine("Second Number: "+c2);
+        Console.WriteLine("Sum: "+sum);
+        Console.WriteLine("Difference: "+difference);
     }
 }
