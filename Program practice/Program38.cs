@@ -7,7 +7,7 @@ b. Write a C# program to delete record of employee whose eid is 104.
 c. select records of employee whose address is Btm and salary is between 30000 to
 40000 using connected architecture (Data Reader).
 */
-
+/*
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -86,3 +86,4 @@ class Program38{
     }
 
 }
+*/
