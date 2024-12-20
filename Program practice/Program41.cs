@@ -1,7 +1,7 @@
 /*
 Write a C# program to show insert and select operations in a database.
 */
-
+/*
 using System;
 using MySql.Data.MySqlClient;
 
@@ -9,8 +9,8 @@ class Program41{
     static void Main(){
         string connectionString = "server= localhost; user=root; password=12345; database=csharpdb";
 
-        InsertEmployee(connectionString, "Ram", 30000.00, "kathmandu");
-        InsertEmployee(connectionString, "Shyam", 40000.00, "Pokhara");
+        InsertEmployee(connectionString, "Ram", 30000.00m, "kathmandu");
+        InsertEmployee(connectionString, "Shyam", 40000.00m, "Pokhara");
 
         SelectEmployees(connectionString);
     }
@@ -53,3 +53,4 @@ class Program41{
         }
     }
 }
+*/
