@@ -2,6 +2,7 @@
 How is a virtual method used to achieve dynamic binding in C#? Explain with the help of a suitable program.
 */
 
+/*
 using System;
 
 class Animal{
@@ -38,3 +39,4 @@ class Program42 {
 
     }
 }
+*/
