@@ -30,5 +30,11 @@ class Program42 {
         Cat obj3 = new Cat();
         obj3.MakeSound();
 
+        Console.WriteLine("\n By using Array of animals:");
+        Animal[] animals = {obj, obj2, obj3};
+        foreach(var container in animals){
+            container.MakeSound();
+        }
+
     }
 }
