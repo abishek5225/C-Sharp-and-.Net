@@ -2,6 +2,7 @@
 Write a C# program to demonstrate multilevel and multiple inheritance.
 */
 
+/*
 class Person{
     public void DisplayPersonInfo(){
         Console.WriteLine("This is a person");
@@ -54,3 +55,4 @@ class Program43 {
         obj1.Women();
     }
 }
+*/
