@@ -11,102 +11,105 @@ than 35.
 average salary of employees.
 • Select records of employee group by address in ascending order based on age.
 */
-/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-// Define Employee class
 class Employee
 {
     public int Id { get; set; }
     public string Name { get; set; }
     public int Age { get; set; }
     public string Address { get; set; }
-    public decimal Salary { get; set; }
+    public double Salary { get; set; }
 }
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Step 1: Create a list of employees
-        List<Employee> employees = new List<Employee>
+        List<Employee> employees = new List<Employee>()
         {
-            new Employee { Id = 1, Name = "Ramesh", Age = 28, Address = "Btm", Salary = 25000 },
-            new Employee { Id = 2, Name = "Suresh", Age = 32, Address = "Jayanagar", Salary = 18000 },
-            new Employee { Id = 3, Name = "Rajesh", Age = 26, Address = "Btm", Salary = 22000 },
-            new Employee { Id = 4, Name = "Rahul", Age = 36, Address = "Koramangala", Salary = 32000 },
-            new Employee { Id = 5, Name = "Ravi", Age = 29, Address = "Btm", Salary = 27000 }
+            new Employee { Id = 1, Name = "Ravi", Age = 30, Address = "Btm", Salary = 25000 },
+            new Employee { Id = 2, Name = "John", Age = 28, Address = "Indira Nagar", Salary = 18000 },
+            new Employee { Id = 3, Name = "Rakesh", Age = 40, Address = "Btm", Salary = 32000 },
+            new Employee { Id = 4, Name = "Raj", Age = 26, Address = "Btm", Salary = 29000 },
+            new Employee { Id = 5, Name = "Rina", Age = 22, Address = "Koramangala", Salary = 22000 }
         };
 
-        // LINQ Query 1: Select name and age of employees whose salary > 20000 and age < 35
-        var query1 = employees.Where(e => e.Salary > 20000 && e.Age < 35)
-                              .Select(e => new { e.Name, e.Age });
-        Console.WriteLine("Employees with Salary > 20000 and Age < 35:");
-        foreach (var emp in query1)
-        {
-            Console.WriteLine($"Name: {emp.Name}, Age: {emp.Age}");
-        }
-        Console.WriteLine();
+        // Query 1: Select name and age of employees whose salary > 20000 and age < 35
+        var query1 = employees
+            .Where(e => e.Salary > 20000 && e.Age < 35)
+            .Select(e => new { e.Name, e.Age });
 
-        // LINQ Query 2: Select all records of employees whose name starts with 'R' and age > 25 in descending order of age
-        var query2 = employees.Where(e => e.Name.StartsWith("R") && e.Age > 25)
-                              .OrderByDescending(e => e.Age);
-        Console.WriteLine("Employees whose Name starts with 'R' and Age > 25 (Descending order of Age):");
-        foreach (var emp in query2)
+        Console.WriteLine("Employees with salary > 20000 and age < 35:");
+        foreach (var employee in query1)
         {
-            Console.WriteLine($"Id: {emp.Id}, Name: {emp.Name}, Age: {emp.Age}, Address: {emp.Address}, Salary: {emp.Salary}");
+            Console.WriteLine($"Name: {employee.Name}, Age: {employee.Age}");
         }
-        Console.WriteLine();
 
-        // LINQ Query 3: Select all records of the employee whose salary is maximum
-        var maxSalary = employees.Max(e => e.Salary);
-        var query3 = employees.Where(e => e.Salary == maxSalary);
-        Console.WriteLine("Employee(s) with Maximum Salary:");
-        foreach (var emp in query3)
+        // Query 2: Select records of employees whose name starts with 'R' and age > 25, in descending order of age
+        var query2 = employees
+            .Where(e => e.Name.StartsWith("R") && e.Age > 25)
+            .OrderByDescending(e => e.Age);
+
+        Console.WriteLine("\nEmployees whose name starts with 'R' and age > 25 (Descending order by age):");
+        foreach (var employee in query2)
         {
-            Console.WriteLine($"Id: {emp.Id}, Name: {emp.Name}, Age: {emp.Age}, Address: {emp.Address}, Salary: {emp.Salary}");
+            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}, Age: {employee.Age}, Address: {employee.Address}, Salary: {employee.Salary}");
         }
-        Console.WriteLine();
 
-        // LINQ Query 4: Select id and name of employees whose salary is between 20000 and 30000
-        var query4 = employees.Where(e => e.Salary >= 20000 && e.Salary <= 30000)
-                              .Select(e => new { e.Id, e.Name });
-        Console.WriteLine("Employees with Salary between 20000 and 30000:");
-        foreach (var emp in query4)
+        // Query 3: Select the employee whose salary is maximum
+        var query3 = employees
+            .Where(e => e.Salary == employees.Max(emp => emp.Salary))
+            .FirstOrDefault();
+
+        Console.WriteLine("\nEmployee with the highest salary:");
+        if (query3 != null)
         {
-            Console.WriteLine($"Id: {emp.Id}, Name: {emp.Name}");
+            Console.WriteLine($"Id: {query3.Id}, Name: {query3.Name}, Age: {query3.Age}, Address: {query3.Address}, Salary: {query3.Salary}");
         }
-        Console.WriteLine();
 
-        // LINQ Query 5: Select id and name of employees whose address is 'Btm' and salary > average salary
-        var averageSalary = employees.Average(e => e.Salary);
-        var query5 = employees.Where(e => e.Address == "Btm" && e.Salary > averageSalary)
-                              .Select(e => new { e.Id, e.Name });
-        Console.WriteLine("Employees in 'Btm' with Salary > Average Salary:");
-        foreach (var emp in query5)
+        // Query 4: Select id and name of employees whose salary is between 20000 and 30000
+        var query4 = employees
+            .Where(e => e.Salary >= 20000 && e.Salary <= 30000)
+            .Select(e => new { e.Id, e.Name });
+
+        Console.WriteLine("\nEmployees with salary between 20000 and 30000:");
+        foreach (var employee in query4)
         {
-            Console.WriteLine($"Id: {emp.Id}, Name: {emp.Name}");
+            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}");
         }
-        Console.WriteLine();
 
-        // LINQ Query 6: Group records of employees by address in ascending order of age
-        var query6 = employees.GroupBy(e => e.Address)
-                              .Select(group => new
-                              {
-                                  Address = group.Key,
-                                  Employees = group.OrderBy(e => e.Age)
-                              });
-        Console.WriteLine("Employees Grouped by Address (Ascending order of Age):");
+        // Query 5: Select id and name of employees whose address is 'Btm' and salary is greater than average salary
+        double averageSalary = employees.Average(e => e.Salary);
+        var query5 = employees
+            .Where(e => e.Address == "Btm" && e.Salary > averageSalary)
+            .Select(e => new { e.Id, e.Name });
+
+        Console.WriteLine($"\nEmployees from 'Btm' with salary greater than average ({averageSalary}):");
+        foreach (var employee in query5)
+        {
+            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}");
+        }
+
+        // Query 6: Group employees by address and order by age in ascending order
+        var query6 = employees
+            .GroupBy(e => e.Address)
+            .Select(g => new
+            {
+                Address = g.Key,
+                Employees = g.OrderBy(e => e.Age)
+            });
+
+        Console.WriteLine("\nEmployees grouped by address and ordered by age:");
         foreach (var group in query6)
         {
             Console.WriteLine($"Address: {group.Address}");
-            foreach (var emp in group.Employees)
+            foreach (var employee in group.Employees)
             {
-                Console.WriteLine($"  Id: {emp.Id}, Name: {emp.Name}, Age: {emp.Age}, Salary: {emp.Salary}");
+                Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}, Age: {employee.Age}, Salary: {employee.Salary}");
             }
         }
     }
 }
-*/
